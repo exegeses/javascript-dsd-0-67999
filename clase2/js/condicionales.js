@@ -9,9 +9,9 @@ let respuesta = prompt('¿qué seleccionado ganó la copa Qatar 2022?');
 
 if( respuesta.toLowerCase() == 'argentina' ){
     //bloque a ejecutar si la condición es true
-    txt.innerText = 'Correcto!';
+    txt.innerHTML = 'Correcto! <br> <img src="imgs/ok.png">';
 }
 else{
     //bloque a ejecutar si la condición es false
-    txt.innerText = 'Incorrecto!';
+    txt.innerHTML = 'Incorrecto! <br> <img src="imgs/error.png">';
 }

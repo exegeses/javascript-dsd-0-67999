@@ -45,3 +45,24 @@ nav{
     font-size: 2em;
     border-radius: 8px;
 }
+
+#caja{
+    width: 256px;
+    height: 256px;
+    background-color: #afafaf;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+#thumbs img{
+    width: 128px;
+    cursor: pointer;
+    margin: 4px;
+    border: 1px solid #282c2a;
+    &:hover{
+        border: 1px solid hsl(150, 5%, 80%);
+    }
+}
+#ampliada{
+    width: 100%;
+}
