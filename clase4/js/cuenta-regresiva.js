@@ -3,12 +3,24 @@ const txtDias = document.getElementById('txtDias');
 const txtHoras = document.getElementById('txtHoras');
 const txtMinutos = document.getElementById('txtMinutos');
 const txtSegundos = document.getElementById('txtSegundos');
+const h1 = document.querySelector('h1');
+
+let intervalo = ''; // variable auxiliar
 
 //declaramos función de control
+function agragarCero( numero )
+{
+    if( numero < 10 ){
+        numero = '0' + numero;
+    }
+    return numero;
+}
+
+
 function countdown(){
     //creamos objetos de fecha
     const actual = new Date();
-    const final = new Date(2023, 9, 10, 20);
+    const final = new Date(2023, 9, 10, 22);
     //diferencia entre horas
     let diferencia = final - actual;
     /*  tiempo  expresado en MILISEGUNDOS*/
@@ -39,19 +51,23 @@ function countdown(){
     segundos = segundos % 60;
         console.log(segundos)
 
+/*  intetrumpir el setInterval */
+if( dias <= 0 && horas <= 0 && minutos <= 0 && segundos < 0  ){
+    //dejar de actualizar
+    h1.innerText = 'Oderta finalizada';
+    clearInterval( intervalo );
+    segundos = 0;
+    minutos = 0;
+    horas = 0;
+    segundos = 0;
+}
+
     /* agregamos 0s iniciales */
-    if( segundos < 10 ){
-        segundos = '0'+ segundos
-    }
-    if( minutos < 10 ){
-        minutos = '0'+ minutos
-    }
-    if( horas < 10 ){
-        horas = '0'+ horas
-    }
-    if( dias < 10 ){
-        dias = '0'+ dias
-    }
+
+        segundos = agragarCero( segundos );
+        minutos = agragarCero( minutos );
+        horas = agragarCero( horas );
+        dias = agragarCero( dias );
 
 
     /* imprimimos en los span */
@@ -63,4 +79,4 @@ function countdown(){
 //invocamos a la función
 countdown();
 //actualizamos el llamado a la función
-setInterval( countdown )
+intervalo = setInterval( countdown );

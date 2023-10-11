@@ -66,3 +66,26 @@ nav{
 #ampliada{
     width: 100%;
 }
+
+#color-picker{
+   margin-top: 16px;
+   width: 56px;
+   height: 56px;
+   position: relative;
+   top: 16px;
+   cursor: pointer;
+}
+#btn-picker{
+    margin-left: 12px;
+    padding: 10px 24px ;
+    background-color: hsl(149, 34%, 24%);
+    color: hsl(150, 5%, 86%);
+    border-radius: 8px;
+    transition: 500ms;
+    border: none;
+    font-size: 20px;
+}
+#btn-picker:hover{
+    background-color: hsl(149, 34%, 34%);
+        box-shadow: 0 0 8px hsl(149, 34%, 45%);
+}
