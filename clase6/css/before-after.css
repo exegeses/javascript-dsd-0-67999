@@ -1,0 +1,36 @@
+:root{
+    --text: #d4d4d4;
+    --background: #201d1d;
+    --primary: #f6cd74;
+    --secondary: #c1953e;
+    --accent: #F1B172; /*#a5751d;*/
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 40px;
+}
+body{
+    width: 768px;
+    margin: auto;
+}
+
+article{
+    background-color: hsl(0, 5%, 40%);
+    width: 400px;
+    padding: 64px;
+    margin: auto;
+    text-align: center;
+    box-ordinal-group: 8px;
+    position: relative;
+}
+    article::before{
+        content: '🍊';
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+    article::after{
+        content: ' ver más 🔜';
+    }
