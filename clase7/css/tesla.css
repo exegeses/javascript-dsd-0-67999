@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+:root{
+    --textos-b: #3c3c3c;
+    --textos-w: #fff;
+}
+body{
+    font-family: 'Figtree', sans-serif;
+    background-image: url(../imgs/bg-model-s.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
+header{
+    height: 56px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    width: 100vw;
+    /* background-color: #fff;*/
+    background-color: rgba(0, 0, 0, 0.5);
+}
+h1 span{
+    font-weight: 300;
+    display: none;
+}
+h1 img{
+    width: 120px;
+    position: relative;
+    top: -4px;
+    filter: invert();
+}
+
+/* navegación */
+header nav a{
+    padding: 8px;
+    color: var(--textos-w);
+}
+
+/* menu derecha */
+#right-nav img{
+    width: 24px;
+    filter: invert();
+}
+/* submenu modelos */
+.desplegado{
+    transform: translateY(0px);
+}
+.oculto{
+    transform: translateY(-312px);/* submenu oculto */
+}
+#sub-vehicles{
+    height: 256px;
+    background-color: #fff;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
+}
+#sub-vehicles article{
+    width: 212px;
+    text-align: center;
+    margin: 12px;
+    font-weight: 500;
+}
+#sub-vehicles article img{
+    width: 212px;
+}

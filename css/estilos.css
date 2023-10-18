@@ -124,3 +124,21 @@ nav{
     content: 'Persona';
     font-size: 48px;
 }
+
+#marcas{
+    width: 550px;
+    margin: 32px auto;
+    padding: 24px 16px;
+    background-color: rgba(255, 255, 255, 25%);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    #marcas img{
+        cursor: pointer;
+        filter: invert();
+    }
+    #txt2{
+        font-size: 2em;
+    }
