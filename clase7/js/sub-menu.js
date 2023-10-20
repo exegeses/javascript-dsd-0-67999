@@ -4,7 +4,7 @@ const nav = document.querySelectorAll('header nav a');
 console.log(nav);
 const btn = nav[0];
 
-//let estado = 'oculto';
+let estado = 'oculto';
 subMenu.classList.add('oculto');
 
 
@@ -12,8 +12,8 @@ btn.addEventListener(
         'click',
         function()
         {
-            subMenu.classList.toggle('oculto');
-            /*
+            //subMenu.classList.toggle('oculto');
+            
             if( estado == 'oculto' ){
                 subMenu.classList.remove('oculto');
                 subMenu.classList.add('desplegado');
@@ -23,6 +23,6 @@ btn.addEventListener(
                 subMenu.classList.remove('desplegado');
                 subMenu.classList.add('oculto');
                 estado = 'oculto';
-            }*/
+            }
         }
 );

@@ -25,3 +25,15 @@ next.addEventListener(
             txt2.innerText = marcas[ posicion ];
         }
 );
+
+prev.addEventListener(
+    'click',
+    function()
+    {
+        posicion--;
+        if( posicion < 0 ){
+            posicion = marcas.length-1; // el '-1' para posicionarnos en el ultimo elemnto del array
+        }
+        txt2.innerText = marcas[ posicion ];
+    }
+);
